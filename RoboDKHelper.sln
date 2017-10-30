@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoboDKHelper", "RoboDKHelper\RoboDKHelper.csproj", "{08D341CF-AFE6-4775-AE55-217817B480A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoboDkTest", "RoboDkTest\RoboDkTest.csproj", "{BC2B8770-E32D-4D2A-B158-2742BD2F3245}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08D341CF-AFE6-4775-AE55-217817B480A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08D341CF-AFE6-4775-AE55-217817B480A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08D341CF-AFE6-4775-AE55-217817B480A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08D341CF-AFE6-4775-AE55-217817B480A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC2B8770-E32D-4D2A-B158-2742BD2F3245}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC2B8770-E32D-4D2A-B158-2742BD2F3245}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC2B8770-E32D-4D2A-B158-2742BD2F3245}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC2B8770-E32D-4D2A-B158-2742BD2F3245}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1C094FE-CFB8-4537-866E-5A9E5BC3AF56}
+	EndGlobalSection
+EndGlobal
