@@ -60,14 +60,14 @@ namespace RoboDkTest
         }
         private void button12_Click(object sender, EventArgs e)
         {
-            //启动皮带
+            // 启动皮带
             RoboDK.Item program = roboDK.GetItem("MoveConveyor");
             program.RunCode();
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
-            //停止皮带
+            // 停止皮带
             RoboDK.Item program = roboDK.GetItem("MoveConveyor");
             program.Stop();
         }
@@ -120,6 +120,8 @@ namespace RoboDkTest
                 }
             }
 
+            
+            RDK.SetParam("SENSOR", "0");
             RDK.Render(true);
             RDK.Disconnect();
 
