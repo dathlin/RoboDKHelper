@@ -1919,7 +1919,7 @@ namespace RoboDKHelper
             /// <param name="tocolor">color to change to</param>
             /// <param name="fromcolor">filter by this color</param>
             /// <param name="tolerance">optional tolerance to use if a color filter is used (defaults to 0.1)</param>
-            public void Recolor(double[] tocolor, double[] fromcolor = null, double tolerance = 0.1)
+            public void ReColor(double[] tocolor, double[] fromcolor = null, double tolerance = 0.1)
             {
                 link.check_connection();
                 if (fromcolor == null)
@@ -1939,6 +1939,47 @@ namespace RoboDKHelper
                 link.SendDoubleArray(combined);
                 link.check_status();
             }
+
+
+            /// <summary>
+            /// 改变一个物体的颜色，该颜色的数据值必须在0-1之间的double值，应该包含[R,G,B,A]值
+            /// </summary>
+            /// <param name="toColor"></param>
+            public void SetColor(double[] toColor)
+            {
+                link.check_connection();
+                string command = "S_Color";
+                link.send_line(command);
+                link.SendItem(this);
+                link.SendDoubleArray(toColor);
+                link.check_status();
+            }
+
+            /// <summary>
+            /// 获取当前物体的颜色，该颜色为标准值
+            /// </summary>
+            /// <returns></returns>
+            public System.Drawing.Color GetColor()
+            {
+                link.check_connection();
+                string command = "G_Color";
+                link.send_line(command);
+                link.SendItem(this);
+                double[] colors = link.ReceiveArray();
+                link.check_status();
+
+                byte r = (byte)(colors[0] * 255);
+                byte g = (byte)(colors[1] * 255);
+                byte b = (byte)(colors[2] * 255);
+                byte a = 0;
+                if (colors.Length > 3)
+                {
+                    a = (byte)(colors[3] * 255);
+                }
+                
+                return System.Drawing.Color.FromArgb(a, r, g, b);
+            }
+
 
             /// <summary>
             /// Apply a scale to an object to make it bigger or smaller.

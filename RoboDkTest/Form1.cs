@@ -115,7 +115,7 @@ namespace RoboDkTest
                         newPart.SetName("Part " + i.ToString() + j.ToString() + k.ToString());
                         newPart.SetPose(Matrix.Transl(location_x, location_y, location_z));
                         newPart.SetVisible(true, 0);
-                        newPart.Recolor(new double[] { random.NextDouble(), random.NextDouble(), random.NextDouble(), 1 });
+                        newPart.SetColor(new double[] { random.NextDouble(), random.NextDouble(), random.NextDouble(), 1 });
                     }
                 }
             }
